@@ -1,0 +1,56 @@
+:root {
+  --yellow: #ffc600;
+}
+
+body {
+  font-size: 15px;
+}
+
+button {
+  background: var(--yellow);
+  border: 0;
+  padding: 10px 20px;
+}
+
+img {
+  max-width: 100%;
+}
+
+.top {
+  display: grid;
+  grid-template-areas:
+    "hero hero cta1"
+    "hero hero cta2";
+}
+
+.hero {
+  grid-area: hero;
+  min-height: 400px;
+  background: white url(img/taco.jpg);
+  background-size: cover;
+  background-position: bottom right;
+  padding: 50px;
+
+  /*use flex box instead grid to remove column area*/
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+
+  /*
+  display: grid;
+  justify-content: start; /*start from left*/
+  /*align-content: center; /*display vertical center*/
+}
+
+.hero > * {
+  background-color: var(--yellow);
+}
+
+.cta1 {
+  grid-area: cta1;
+}
+
+.cta2 {
+  grid-area: cta2;
+}
