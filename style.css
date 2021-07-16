@@ -22,6 +22,8 @@ img {
 .wrapper {
   display: grid;
   grid-gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .top {
